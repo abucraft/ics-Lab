@@ -1,0 +1,68 @@
+#Li Sheng ID:5130379017
+	.pos 0
+init:	irmovl Stack,%esp
+	irmovl Stack,%ebp
+	call Main
+	halt
+
+	.align 4
+# Source block
+src:	.long 0x00a
+	.long 0x0b0
+	.long 0xc00
+
+# Destination block
+dest:	.long 0x111
+	.long 0x222
+	.long 0x333
+
+Main:	pushl %ebp
+	rrmovl %esp,%ebp
+	irmovl src,%ecx
+	pushl %ecx
+	irmovl dest,%ecx
+	pushl %ecx
+	irmovl $3,%ecx
+	pushl %ecx
+	call Copy_block
+	rrmovl %ebp,%esp
+	popl %ebp
+	ret
+
+Copy_block:	pushl %ebp
+		rrmovl %esp,%ebp
+		irmovl $0,%eax
+		mrmovl 8(%ebp),%edx
+		irmovl $0,%ebx
+		subl %edx,%ebx
+		je End
+		mrmovl 12(%ebp),%ecx
+		mrmovl 16(%ebp),%ebx
+Loop:		pushl %eax
+		mrmovl (%ebx),%eax
+		rmmovl %eax,(%ecx)
+		popl %eax
+		pushl %edx
+		mrmovl (%ebx),%edx
+		xorl %edx,%eax
+		irmovl $4,%edx
+		addl %edx,%ecx
+		addl %edx,%ebx
+		popl %edx
+		pushl %eax
+		irmovl $1,%eax
+		subl %eax,%edx
+		popl %eax
+		jne Loop
+End:		rrmovl %ebp,%esp
+		popl %ebp
+		ret
+
+		.pos 0x100
+Stack:
+
+
+
+
+
+		

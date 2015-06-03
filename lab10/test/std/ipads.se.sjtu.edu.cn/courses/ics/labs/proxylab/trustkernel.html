@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://trustkernel.org/en/ -->
+<html lang="en-gb" dir="ltr" class="com_content view-article itemid-182 j33 mm-hover no-touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	  <!--<base href="http://trustkernel.org/en/">--><base href=".">
+  
+  <meta name="keywords" content="ARM TrustZone, Mobile Security Solution, Trusted Kernel, T6, TEE, Trust Kernel">
+  <meta name="author" content="liwenhaosuper">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="T6: TrustZone Based Trusted Kernel for Mobile">
+  <meta name="generator" content="Joomla! - Open Source Content Management">
+  <title>Home - Trust Kernel</title>
+  <link href="./trustkernel_files/trustkernel.html" rel="canonical">
+  <link rel="stylesheet" href="./trustkernel_files/system.css" type="text/css">
+  <link rel="stylesheet" href="./trustkernel_files/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="./trustkernel_files/template.css" type="text/css">
+  <link rel="stylesheet" href="./trustkernel_files/megamenu.css" type="text/css">
+  <link rel="stylesheet" href="./trustkernel_files/custom.css" type="text/css">
+  <link rel="stylesheet" href="./trustkernel_files/template(1).css" type="text/css">
+  <script src="./trustkernel_files/jquery.min.js" type="text/javascript"></script>
+  <script src="./trustkernel_files/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="./trustkernel_files/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="./trustkernel_files/caption.js" type="text/javascript"></script>
+  <script src="./trustkernel_files/bootstrap.js" type="text/javascript"></script>
+  <script src="./trustkernel_files/jquery.tap.min.js" type="text/javascript"></script>
+  <script src="./trustkernel_files/script.js" type="text/javascript"></script>
+  <script src="./trustkernel_files/menu.js" type="text/javascript"></script>
+  <script src="./trustkernel_files/nav-collapse.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+jQuery(document).ready(function(){
+	jQuery('.hasTooltip').tooltip({"html": true,"container": "body"});
+});
+  </script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="YES">
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></head>
+
+<body>
+
+<div class="t3-wrapper features-intro features-intro-1"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+	
+<!-- MAIN NAVIGATION -->
+<header id="t3-mainnav" class="wrap navbar navbar-default navbar-fixed-top t3-mainnav">
+
+	<!-- OFF-CANVAS -->
+		<!-- //OFF-CANVAS -->
+
+	<div class="container">
+
+		<!-- NAVBAR HEADER -->
+		<div class="navbar-header">
+
+			<!-- LOGO -->
+			<div class="logo logo-image">
+				<div class="logo-image">
+					<a href="http://trustkernel.org/" title="Trust Kernel">
+													<img class="logo-img" src="./trustkernel_files/tklogo.png" alt="Trust Kernel">
+						
+												
+						<span>Trust Kernel</span>
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			
+	    	    <!-- HEAD SEARCH -->
+	    <div class="head-search">     
+	      <form class="form-search" action="./trustkernel_files/trustkernel.html" method="post">
+	<div class="search">
+		<label for="mod-search-searchword">Search...</label><i class="fa fa-search"></i><input name="searchword" id="mod-search-searchword" maxlength="20" class="form-control " type="text" size="20">	<input type="hidden" name="task" value="search">
+	<input type="hidden" name="option" value="com_search">
+	<input type="hidden" name="Itemid" value="182">
+	</div>
+</form>
+<div class="mod-languages">
+
+	<ul class="lang-inline">
+						<li class="" dir="ltr">
+			<a href="http://trustkernel.org/zh/">
+							<img src="./trustkernel_files/zh_cn.gif" alt="中文" title="中文">						</a>
+			</li>
+								<li class="lang-active" dir="ltr">
+			<a href="./trustkernel_files/trustkernel.html">
+							<img src="./trustkernel_files/en.gif" alt="English (UK)" title="English (UK)">						</a>
+			</li>
+				</ul>
+
+</div>
+
+	    </div>
+	    <!-- //HEAD SEARCH -->
+	    
+		</div>
+		<!-- //NAVBAR HEADER -->
+
+		<!-- NAVBAR MAIN -->
+				<nav class="t3-navbar-collapse navbar-collapse collapse"><ul class="nav navbar-nav level0">
+<li class="current active">
+<a href="./trustkernel_files/trustkernel.html">Home </a>
+</li>
+<li>
+<a href="http://trustkernel.org/en/solutions">Solutions </a>
+</li>
+<li>
+<a href="http://trustkernel.org/en/download">Download </a>
+</li>
+<li>
+<a href="http://trustkernel.org/en/docs">Docs </a>
+</li>
+<li class="dropdown">
+<a href="http://trustkernel.org/en/team" data-toggle="dropdown" data-target="#">Team <b class="caret"></b></a>
+
+<ul class="level1 dropdown-menu"><li>
+<a href="http://trustkernel.org/en/team/about">About </a>
+</li><li>
+<a href="http://trustkernel.org/en/team/contacts">Contacts </a>
+</li><li>
+<a href="http://trustkernel.org/en/team/support-policy">Support Policy </a>
+</li></ul></li>
+<li>
+<a href="http://www.liwenhaosuper.com/blog">Blog</a>
+</li>
+</ul></nav>
+		
+		<nav class="t3-navbar navbar-collapse collapse">
+			<div class="t3-megamenu" data-responsive="true">
+<ul class="nav navbar-nav level0">
+<li class="current active" data-id="182" data-level="1">
+<a class="" href="./trustkernel_files/trustkernel.html" data-target="#">Home </a>
+</li>
+<li data-id="184" data-level="1">
+<a class="" href="http://trustkernel.org/en/solutions" data-target="#">Solutions </a>
+</li>
+<li data-id="187" data-level="1">
+<a class="" href="http://trustkernel.org/en/download" data-target="#">Download </a>
+</li>
+<li data-id="188" data-level="1">
+<a class="" href="http://trustkernel.org/en/docs" data-target="#">Docs </a>
+</li>
+<li class="dropdown mega" data-id="189" data-level="1">
+<a class=" dropdown-toggle" href="http://trustkernel.org/en/team" data-target="#" data-toggle="dropdown">Team <b class="caret"></b></a>
+<div class="nav-child dropdown-menu mega-dropdown-menu"><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level1">
+<li data-id="190" data-level="2">
+<a class="" href="http://trustkernel.org/en/team/about" data-target="#">About </a>
+</li>
+<li data-id="191" data-level="2">
+<a class="" href="http://trustkernel.org/en/team/contacts" data-target="#">Contacts </a>
+</li>
+<li data-id="192" data-level="2">
+<a class="" href="http://trustkernel.org/en/team/support-policy" data-target="#">Support Policy </a>
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li data-id="193" data-level="1">
+<a class="" href="http://www.liwenhaosuper.com/blog" data-target="#">Blog</a>
+</li>
+</ul>
+</div>
+
+		</nav>
+    <!-- //NAVBAR MAIN -->
+
+	</div>
+</header>
+<!-- //MAIN NAVIGATION -->
+
+
+<div class="page-masthead">
+	
+			<div class="row-feature row-feature-primary " id="Mod94"><div class="container"><div class="row row-feature-ct">
+
+<div class="customrow-feature-primary">
+	<div class="jumbotron jumbotron-primary masthead btn-action">
+<div class="container"><!-- Intro image -->
+<div class="pull-left item-image"><img src="./trustkernel_files/phone.png" alt=""></div>
+<div class="feature-ct pd-feature-ct">
+<div class="page-header">
+<h2>Enhance Device Security</h2>
+</div>
+<p>Combine Security and Functionality Together In One Device</p>
+<div class="btlink clearfix"><!-- <a class="btn btn-primary btn-lg" href="/download"> Download</a> <strong>or</strong>--><a class="btn btn-primary btn-lg" href="http://trustkernel.org/docs"> Learn More</a></div>
+</div>
+</div>
+</div>
+<!--
+<div class="jumbotron jumbotron-primary masthead btn-action">
+<h2>Our Trusted Kernel is Ready!</h2>
+<p>Start to have a try now.</p>
+<div class="btlink clearfix"><a class="btn btn-primary btn-lg" href="/download"> Download</a> <strong>or</strong> <a class="btn btn-primary btn-lg" href="/docs"> Learn More</a></div>
+</div>
+--></div>
+</div></div></div>
+	</div>
+
+
+	
+<div id="t3-mainbody" class="t3-mainbody">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content">
+						
+
+<div class="item-page clearfix">
+
+
+<!-- Article -->
+<article itemscope="" itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB">
+	<meta itemprop="url" content="/en/home">
+
+  
+  <!-- Aside -->
+    <!-- //Aside -->
+
+  
+  
+        
+  
+
+  
+	
+	<section class="article-content clearfix" itemprop="articleBody">
+		<div class="features-intro ">
+<div id="Mod202" class="row-feature  ">
+<div class="container">
+<div class="pull-left item-image"><img src="./trustkernel_files/t6_deploy.png" alt=""></div>
+<div class="row row-feature-ct">
+<div class="page-header">
+<h2>T6：ARM TrustZone Based Trusted Kernel</h2>
+</div>
+<p>T6 is operating system for TrustZone based Trusted Execution Environment(TEE) in ARM-based systems. T6 targets at mobile devices using ARM hardware security extension: TrustZone, which supports legacy operating systems(Android, Linux, etc.) to run simultaneously and provides a strong security property for the legacy operating systems and aims to provide an easy-to-use trusted computing platform for research community, a product-quality TEE for mobile device providers. With T6, customers could provide high assurance system and applications including secure mobile payment, Digital Rights Management, Kernel Rootkit Detection and Prevention, Bring-Your-Own-Device (BYOD) Solutions to end users. We provide T6 in full source code form as well as some common trusted applications.</p>
+</div>
+</div>
+</div>
+<div id="Mod203" class="row-feature  ">
+<div class="container">
+<div class="row row-feature-ct">
+<div class="custom"><header class="jumbotron">
+<h2>Features Of T6</h2>
+</header>
+<section class="article-content">
+<div class="support-policy style2">
+<div class="row-heading ">
+<div class="col-md-14 text-center">Supported Feature</div>
+<div class="col-md-14 text-center">Support Option Details</div>
+</div>
+<div class="row-body level-1">
+<div class="col-md-2 col-type">Global Platform TEE API Compatibility</div>
+<div class="col-md-2 col-detail">Support Global Platform TEE Client API v1.0 And Global Platform TEE Internal API v1.0</div>
+</div>
+<div class="row-body level-2 row-alt">
+<div class="col-md-2 col-type">Crypto API</div>
+<div class="col-md-2 col-detail">Provide Both PolarSSL And OpenSSL Crypto</div>
+</div>
+<div class="row-body level-3">
+<div class="col-md-2 col-type">POSIX API Compatibility</div>
+<div class="col-md-2 col-detail">Support Partial of LibC (newlib)</div>
+</div>
+<div class="row-body level-4 row-alt">
+<div class="col-md-2 col-type">Multitask And Multiple Trustlets</div>
+<div class="col-md-2 col-detail">Support As Multi Processes. Up to 64 Concurrent Trustlets Support</div>
+</div>
+<div class="row-body level-5">
+<div class="col-md-2 col-type">Dynamic Third Party Trustlets Loading</div>
+<div class="col-md-2 col-detail">Yes. The Dynamic Loaded Trustlet Must Be Signed</div>
+</div>
+<div class="row-body level-6 row-alt">
+<div class="col-md-2 col-type">Task And Trustlet Isolation</div>
+<div class="col-md-2 col-detail">Kernel-User Mode And Address Isolation</div>
+</div>
+<div class="row-body level-7">
+<div class="col-md-2 col-type">Rich legacy OS Support</div>
+<div class="col-md-2 col-detail">Theoretically All. We Test It On Android and Ubuntu</div>
+</div>
+<div class="row-body level-8 row-alt">
+<div class="col-md-2 col-type">TrustZone Extensions</div>
+<div class="col-md-2 col-detail">Provide General API And Low Level Interfaces For TZPC And TZASC</div>
+</div>
+<div class="row-body level-9">
+<div class="col-md-2 col-type">Secure Boot And Trust Boot</div>
+<div class="col-md-2 col-detail">Yes</div>
+</div>
+<div class="row-body level-10 row-alt">
+<div class="col-md-2 col-type">Secure User Input</div>
+<div class="col-md-2 col-detail">Yes</div>
+</div>
+<div class="row-body level-11">
+<div class="col-md-2 col-type">Secure Display</div>
+<div class="col-md-2 col-detail">Yes</div>
+</div>
+<div class="row-body level-12  row-alt">
+<div class="col-md-2 col-type">Secure Network Connection</div>
+<div class="col-md-2 col-detail">Yes</div>
+</div>
+<div class="row-body level-13  ">
+<div class="col-md-2 col-type">Posix System Calls</div>
+<div class="col-md-2 col-detail">Yes. T6 Has Dynamic System Call Redirection Mechanism</div>
+</div>
+<div class="row-body level-14  row-alt">
+<div class="col-md-2 col-type">Supported Development Board</div>
+<div class="col-md-2 col-detail">Samsung Exynos4,Samsung Exynos5,ARM Versatile Express, Freescale i.MX6</div>
+</div>
+<div class="row-body level-15">
+<div class="col-md-2 col-type">Build-In Trustlets In T6</div>
+<div class="col-md-2 col-detail">Secure Mobile Payment, Digital Rights Management, Rookit Detection, Password Manager</div>
+</div>
+<div class="row-body level-16 row-alt">
+<div class="col-md-2 col-type">Secure GUI</div>
+<div class="col-md-2 col-detail">Yes</div>
+</div>
+</div>
+<div class="wrap btn-actions text-center" style="margin: 40px 0 60px;"><a class="btn btn-lg btn-primary" title="Sample button" href="http://trustkernel.org/en/#">More Details</a></div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="Mod212" class="row-feature  ">
+<div class="container">
+<div class="row row-feature-ct">
+<div class="custom"><header class="jumbotron">
+<h2>How To Get T6 Source Code</h2>
+<p>We Provide Different Forms Of T6 And Tools</p>
+</header>
+<div class="text-center">
+<div class="col-md-4">
+<p><img src="./trustkernel_files/gift.png" alt="T6 For Researcher"></p>
+<h3>For Researchers</h3>
+<p>For thoses researchers who want to do some reseach prototypes on T6, we provide the T6 SDK for you. If you have not had a development board yet, we also provide a ready to use software and hardware platform for you.</p>
+<div class="wrap btn-actions text-center"><a class="btn btn-primary" href="http://shop110979482.taobao.com/">Access Hardware And Software Platform</a></div>
+</div>
+<div class="col-md-4">
+<p><img src="./trustkernel_files/demo.png" alt="T6 For Demo"></p>
+<h3>For Prototype Oriented Evaluation</h3>
+<p>For those who are ready for project prototype evaluation in TrustZone platform, we provide some relevant demonstration images for you to evaluate T6 and its related security solutions.</p>
+<div class="wrap btn-actions text-center"><a class="btn btn-primary" href="http://trustkernel.org/en/#/">Access DEMO</a></div>
+</div>
+<div class="col-md-4">
+<p><img src="./trustkernel_files/partnership.png" alt="T6 For Partnership"></p>
+<h3>For Manufacturers And Enterprise Users</h3>
+<p>For Manufacturers and enterprise users, we provide T6 as well as a series of security solutions based on T6 in source code form. We can cooperate to have a deep customization on T6.</p>
+<div class="wrap btn-actions text-center"><a class="btn btn-primary" href="http://trustkernel.org/team/contacts">Contact Us</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="Mod204" class="row-feature  ">
+<div class="container">
+<div class="row row-feature-ct">
+<div class="custom"><header class="jumbotron">
+<h2>Mobile Security Solutions</h2>
+<p>A List of Latest Solutions</p>
+</header>
+<div class="gallery">
+<div class="col-xs-6 col-md-3">
+<div class="thumbnail"><a title="blog layout" href="http://trustkernel.org/secure-payment"> <img class="img-responsive" src="./trustkernel_files/securepayment.png" alt="" width="80%" height="80%"> </a>
+<h4>Secure Payment</h4>
+<p>Protect Online-banking Applications</p>
+</div>
+</div>
+<div class="col-xs-6 col-md-3">
+<div class="thumbnail"><a title="features intro 1" href="http://trustkernel.org/en/#"> <img class="img-responsive" src="./trustkernel_files/trustvdi.png" alt="" width="80%" height="80%"> </a>
+<h4>TrustVDI</h4>
+<p>Thin client Desktop Virtualization Solution for BYOD</p>
+</div>
+</div>
+<div class="col-xs-6 col-md-3">
+<div class="thumbnail"><a title="features intro 2" href="http://trustkernel.org/en/#"> <img class="img-responsive" src="./trustkernel_files/trustgate.png" alt="" width="80%" height="80%"> </a>
+<h4>BriStorage</h4>
+<p>Protect Sensitive Data Seemlessly in Mobile Devices</p>
+</div>
+</div>
+<div class="col-xs-6 col-md-3">
+<div class="thumbnail"><a title="portfolio layout" href="http://trustkernel.org/en/#"> <img class="img-responsive" src="./trustkernel_files/adattesters.png" alt="" width="80%" height="80%"> </a>
+<h4>AdAttester</h4>
+<p>Detect and Prevent Mobile Ad Fraud</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="Mod210" class="row-feature  ">
+<div class="container">
+<div class="row row-feature-ct">
+<div class="custom"><header class="jumbotron">
+<h2>Various Platforms Support</h2>
+<p>T6 Supports Many Hardware Platforms</p>
+</header>
+<div class="col-xs-3 col-md-4"><a class="thumbnail" href="http://trustkernel.org/index.php/platform/exynos"> <img src="./trustkernel_files/exynos.png" alt="Exynos"> </a>
+<h4 class="text-center">Samsung Exynos</h4>
+</div>
+<div class="col-xs-3 col-md-4"><a class="thumbnail" href="http://trustkernel.org/index.php/platform/versatile-express"> <img src="./trustkernel_files/versatileexpress.png" alt="versatile express"> </a>
+<h4 class="text-center">ARM Versatile Express</h4>
+</div>
+<div class="col-xs-3 col-md-4"><a class="thumbnail" href="http://trustkernel.org/index.php/platform/freescale"> <img src="./trustkernel_files/freescale.png" alt="freescale imx" border="0"> </a>
+<h4 class="text-center">Freescale i.MX</h4>
+</div>
+<div class="wrap btn-actions text-center"><a class="btn btn-primary btn-lg" href="http://trustkernel.org/team/contacts">Require A New Platform Support?</a></div>
+</div>
+</div>
+</div>
+<div id="Mod211" class="row-feature  ">
+<div class="container">
+<div class="row row-feature-ct">
+<div class="custom"><header class="jumbotron">
+<h2>Frequent Asked Questions</h2>
+</header>
+<div class="col-md-6">
+<h3>What is TrustZone?</h3>
+<p>Started from ARMv6, ARM TrustZone technology aims at establishing trust in ARM-based platforms. In contrast to TPMs, which were designed as fixed-function devices with a predefined feature set, TrustZone represented a much more flexible approach by leveraging the CPU as a freely programmable trusted platform module. To do that, ARM introduced a special CPU mode called “secure mode” in addition to the regular normal mode, thereby establishing the notions of a “secure world” and a “normal world”. The distinction between both worlds is completely orthogonal to the normal ring protection between user-level and kernel-level code and hidden from the operating system running in the normal world. Furthermore, it is not limited to the CPU but propagated over the system bus to peripheral devices and memory controllers. This way, such an ARM-based platform effectively becomes a kind of split personality. When secure mode is active, the software running on the CPU has a different view on the whole system than software running in non-secure mode. This way, system functions, in particular security functions and cryptographic credentials, can be hidden from the normal world. It goes without saying that this concept is vastly more flexible than TPM chips because the functionality of the secure world is defined by system software instead of being hard-wired. For more technical details on ARM TrustZone, please refer to our blog: <a href="http://www.liwenhaosuper.com/blog/2014/05/26/tee-and-arm-trustzone/">TEE And ARM TrustZone</a> for more information.</p>
+<h3>What is TrustZone Trusted Kernel For ?</h3>
+<p>TrustZone trusted kernel fully utilizes the security features of ARM TrustZone hardware architecture to provid full-system protection for the application and system. Take the mobile secure payment as an example, the existing numerous mobile phone malware in operating system such as Android, IOS makes our phone not secure at all. These complex OSes often have many security vulnerabilities and an attacker can easily exploit these vulnerabilities to attack end users, such as stealing a user's payment password, tamper with the payment transaction amount even secretly the money into the attacker's account without the user's consent. TrustZone trusted kernel is able to guard against such attacks by providing a full system hardware and software security architecture.</p>
+<h3>What is Global Platform TEE API ?</h3>
+<p>Global Platform is a non-profit organization and it proposed a set of TEE architecture and TEE APIs, which defines the TEE architecture and provide a uniform application developers a set of API so that they can write portable security kernel security applications. TEE API contains two parts, one part is TEE Client API, which is used to provide a unified interface to the application running in the general operating system to invoke service of TEE security applications, the other part is TEE Internal API, a unified interface for providing for trusted applications running in TEE.</p>
+</div>
+<div class="col-md-6">
+<h3>Could We Replace T6 With Linux As Trusted Kernel ?</h3>
+<p>Theoretically, this is possible, but we strongly recommend not to adopt this solution. The main reason of having so many security vulnerabilities in modern operating system is the high complexity of implementation and the large trusted computing base, it is difficult to eliminate these security vulnerabilities. Linux itself is a complex kernel, it also has many security holes, every year CVE will have at least a dozen Linux kernel security vulnerabilities, and the premise of trusted kernel is to high security, with a simple and well design, less code in implementation, the trusted kernel will be easier to achieve high security. In addition, there is also a implementation consideration: in our experience, bottom-up approach to implement a security kernel is easier than the top-down approach which starts from cutting an existing kernel.</p>
+<h3>Could T6 Be Flashed Into My Phone Directly ?</h3>
+<p>Currently no, this is because the majority of mobile phones are locked at the Bootloader level to prevent the user from modifying the firmware which is provided by the mobile phone manufacturers. Since T6 is a full system level protection, it needs to modify the Bootloader to have a secure boot. Now we need to cooperate with manufacturers in order to make the T6 to fit the corresponding models of mobile phone. Of course, we have been trying to make sure that T6 can directly be flashed into the mobile phone directly.</p>
+<h3>Does T6 Support Virtualization ?</h3>
+<p>Currently T6 does not use virtualization to provide more features. Because TrustZone and virtualization are two characteristics of orthogonal, T6 is compatible with existing virtualization solutions such as KVM-ARM, XVisor and XEN.</p>
+<h3>Does T6 Require Heavy Modifications on Existing Operating Systems?</h3>
+<p>Basically T6 doesn't make any changes to the original operating system. For some specific business requirements, such as Rookit protection, T6 requires a light-weight modification to the operating system.</p>
+<h3>Does T6 Support Fingerprint Identification?</h3>
+<p>Yes</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>	</section>
+  
+  <!-- footer -->
+    <!-- //footer -->
+
+	
+				
+	</article>
+<!-- //Article -->
+
+
+</div>
+
+
+		</div>
+		<!-- //MAIN CONTENT -->
+
+</div> 
+	
+<!-- BACK TOP TOP BUTTON -->
+<div id="back-to-top" data-spy="affix" data-offset-top="300" class="back-to-top hidden-xs hidden-sm affix-top">
+  <button class="btn btn-primary" title="Back to Top"><i class="fa fa-caret-up"></i></button>
+</div>
+<script type="text/javascript">
+(function($) {
+	// Back to top
+	$('#back-to-top').on('click', function(){
+		$("html, body").animate({scrollTop: 0}, 500);
+		return false;
+	});
+})(jQuery);
+</script>
+<!-- BACK TO TOP BUTTON -->
+
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+	<p align="center"><b>Copyright 2013-2014 liwenhaosuper All Rights Reserved</b></p>
+</footer>
+<!-- //FOOTER -->
+
+</div>
+
+
+
+</body></html>

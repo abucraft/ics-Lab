@@ -1,0 +1,49 @@
+#Li Sheng ID:5130379017
+	.pos 0
+init:	irmovl Stack,%esp
+	irmovl Stack,%ebp
+	call Main
+	halt
+
+	.align 4
+ele1:
+	.long 0x00a
+	.long ele2
+ele2:
+	.long 0x0b0
+	.long ele3
+ele3:
+	.long 0xc00
+	.long 0
+
+Main:	pushl %ebp
+	rrmovl %esp,%ebp
+	irmovl ele1,%ecx
+	pushl %ecx
+	call Sum_list
+	rrmovl %ebp,%esp
+	popl %ebp
+	ret
+
+Sum_list:	pushl %ebp
+		rrmovl %esp,%ebp
+		mrmovl 8(%ebp),%ecx
+		irmovl $0,%edx
+		irmovl $0,%eax
+		subl %ecx,%edx
+		je End
+Loop:		mrmovl (%ecx),%ebx
+		addl %ebx,%eax
+		mrmovl 4(%ecx),%ecx
+		irmovl $0,%edx
+		subl %ecx,%edx
+		jne Loop
+End:		rrmovl %ebp,%esp
+		popl %ebp
+		ret
+
+		.pos 0x100
+Stack:
+
+
+

@@ -1,0 +1,4 @@
+document.write('<!--全屏下推自动投放代码开始 -->');
+adInfoTempXt = {	index:1,	src1:"http://img2.126.net/ntesrich/2014/1128/1417155227529_9kbw.swf",	src2:"http://img2.126.net/ntesrich/2014/1128/1417155236133_vu6m.swf",	url:"http://g.163.com/a?CID=32220&Values=2765264893&Redirect=http://ad.doubleclick.net/ddm/trackclk/N4517.103378.4089234182421/B8369985.113144754;dc_trk_aid=286241684;dc_trk_cid=60328037?http://www.porsche.com/microsite/cayenne/china/welcome/default.aspx",	key:"7360382921417157725098111"}
+document.write('<script language="javascript" src="http://img2.126.net/ntesrich/auto/xt/xtbox-v1.2.9-130507.js"></script>');
+document.write('<!--全屏下推自动投放代码结束-->');

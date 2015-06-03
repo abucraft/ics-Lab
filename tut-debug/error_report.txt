@@ -1,0 +1,108 @@
+/*
+ * BUG#0
+ * description: 
+     miss semicolon
+ * location: 
+ *   int a = 10  (line 18)
+ * evidence: 
+ *   test.c:19: error: two or more data types in declaration specifiers
+ */
+
+BUG#1
+description:enum { buf_size=buf_nrec*100 } expected ";"
+
+location: line 54 
+
+evidence:  error: expected ‘;’, identifier or ‘(’ before ‘struct’
+
+
+
+
+BUG#2
+description:typedef struct record { 
+	char key[key_len] ;
+	char recno[recno_len];
+	char pad[pad_len];
+} record_t          expected ";"
+
+location:line 60
+
+evidence:  error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘static’
+
+
+
+BUG#3
+description:in the static void gen_rec(record *rec)        turn the "record" to "record_t"
+
+location:line 114
+
+evidence:gen_sort.c:114:9: error: unknown type name ‘record’
+
+
+
+BUG#4
+description:not include <stdio.h>
+
+location:line 42
+
+evidence: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+
+
+
+
+BUG#5
+description:if(!file) expected "{"
+
+location:line 195
+
+evidence:error: expected identifier or ‘(’ before ‘while’
+
+
+
+BUG#6
+description: for (j = 0; j < 10; i++ )     turn "i" to "j"
+
+location:line 125
+
+evidence:through observation
+
+
+
+
+BUG#7
+description:(cnt <= buf_nrec)    turn "<=" to "<"
+
+location:line 148
+
+evidence:cnt should 
+
+
+
+
+BUG#8
+description:malloc(buf_nrec)   turn "buf_nrec" to "buf_size"
+
+location:line 182
+
+evidence:memory size should be 100*16
+
+
+
+
+BUG#9
+description:enum { rec_len = key_len + pad_len };   add "+ recno_len" after pad_len
+
+location:50
+
+evidence:rec_len should be 100
+
+
+
+
+BUG#10
+description:fopen(fn, "r")  turn "r" to "w"
+
+location:188
+
+evidence:the file open mode should be write
+

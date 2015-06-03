@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>SE101 / 2014 / Welcome</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="ics.css" type="text/css">
+ 
+<script type="text/javascript"> 
+    function autofill_email() {
+        var spans = document.getElementsByTagName("span");
+        for (i = 0; i < spans.length; i++) {
+            if (spans[i].className != "email_autofill")
+                continue;
+            spans[i].innerHTML = spans[i].innerHTML.replace(/ at /, "@");
+        }
+    }
+ 
+    function page_onload() {
+        autofill_email();
+    }
+</script>
+ 
+</head>
+ 
+<body bgcolor="#ffffff" text="#000000" onLoad="page_onload()">
+<table width="100%" height="100%" border="0" cellspacing="0"
+cellpadding="0">
+  <tbody>
+    <!-- Header row -->
+    <tr height="60">
+      <td colspan="3">
+	<table width="100%" height="60" border="0" cellspacing="0"
+	       cellpadding="0">
+	  <tbody>
+	    <tr> 
+	      <td width="70%" bgcolor="#000000">
+		<div align="left" class="titleHead header">
+		  <a name="top"><b><i>ICS</i>: Introduction to Computer Systems</b></a>
+		</div>
+	      </td>
+	      <td bgcolor="#0099cc" halign="center" valign="center" width="30%">
+		<div align="center" class="titleHead header">
+		  <b>SE101 2014</b>
+		</div>
+	      </td> 
+	    </tr> 
+	  </tbody> 
+      </table>
+      </td> 
+    </tr> 
+
+    <!-- horiz line --> 
+    <tr> 
+      <td colspan="3" height="2" bgcolor="#0099cc"> <br> </td> 
+    </tr> 
+    <tr>
+      <!-- Menu --> 
+      <td bgcolor="#0099cc" valign="top" width="180"> <table cols="2"
+							     rows="1"
+							     border="0"
+							     cellspacing="0"
+							     cellpadding="0"
+							     width="100%"
+							     height="100%">
+	  <tbody> 
+	    <tr> 
+	      <td valign="top">
+		<table cols="1" rows="1" border="0" cellspacing="0"
+				       cellpadding="0" width="100%"> 
+		  <tbody> 
+		    <tr> 
+		      <td> <div class="menuHead"> <a href="index.shtml"
+			    class="menuItem"> Home / News</a></div></td>
+		    </tr> 
+		    <tr> 
+		      <td> <div class="menuHead"> <a href="schedule.shtml"
+				class="menuItem">Schedule</a> </div></td>
+		    </tr> 
+			<tr>
+			   <td><div class="menuHead"><a href="http://ipads.se.sjtu.edu.cn:1984"
+				class="menuItem">Register / Login</a></div></td>
+			</tr> 
+		    <tr> 
+		      <td>
+			  <hr>
+		      </td> 
+		    </tr> 
+		    <tr> 
+		      <td> <div class="menuHead"> <a href="general.shtml"
+				class="menuItem">General Information </a> </div></td>
+		    </tr> 
+		    <tr> 
+		      <td> <div class="menuHead"> <a href="general.shtml#staff" class="menuItem">Staff List</a>
+		      </div></td> 
+		    </tr> 
+		    <tr> 
+		      <td> <div class="menuHead"> <a href="errata.shtml" class="menuItem">Class Notes Errata</a>
+		      </div></td> 
+		    </tr> 
+			<tr> 
+		      <td> <div class="menuHead"> <a href="http://ipads.se.sjtu.edu.cn/courses/ics/q2a" class="menuItem">Q&A Forum</a>
+		      </div></td> 
+		    </tr>
+		    <tr> 
+		      <td>
+			  <hr> 
+		      </td> 
+		    </tr>
+			<tr> 
+		      <td> <div class="menuHead"> <a href="prior.shtml"
+				class="menuItem">Prior Materials</a><br> 
+		      </div></td> 
+		    </tr>
+			<tr> 
+		      <td> <div class="menuHead"> <a href="2012/index.shtml"
+				class="menuItem">2012</a><br> 
+		      </div></td> 
+		    </tr>
+			<tr> 
+		      <td> <div class="menuHead"> <a href="2013/index.shtml"
+				class="menuItem">2013</a><br> 
+		      </div></td> 
+		    </tr>
+		  </tbody> 
+	      </table></td> 
+	      <td width="3" bgcolor="#0099cc"> <br> </td> 
+	    </tr> 
+	  </tbody> 
+      </table></td> 
+      <!-- End Menu --> 
+
+      <td colspan="2"> <table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%"> 
+	  <tbody> 
+	    <tr> 
+	      <td style="padding: 10px;" valign="top" align="left">
+ 
+<!-- ------------------ -->
+<!-- Begin Page Content -->
+<h2>Introduction to Comupter Systems</h2>
+<hr>
+<p>
+This is an introductory course for computer systems. 
+The course content includes representation of integer and floating point, 
+machine-level instructions, relationship with assembly code and high-level programming language, 
+virtual memory and program optimization. 
+</p>
+</p>It is a prerequisite for most up-level system courses including processor architecture, 
+memory hierarchy (main memory, cache), peripheral devices, exceptions and processes, 
+linker and loader and concurrent programming. 
+</p>
+<p>The participation of this course involve four forms of activity: attending the lectures, homework, lab assignments, and exams.</p>
+<hr>
+
+<br />
+<br />
+
+<!-- news -->
+<h2>News</h2>
+<hr>
+
+<!--
+<h3>Jan. 10, 2014: Score Publish</h3>
+<p>The score of final exam has been published (full score is 100). Students could query score by logging website.(<i><a href="misc/2012-ics2-final-exam-result.txt">results</a></i>)</br>  
+<i>NOTE: if you have any questions, please contact your teacher(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before Jan.15.</i>
+</p></br>
+
+<h3>Jan. 8, 2014: Paper & Solution Publish</h3>
+<p>The paper and solution (A and B) of final exam has been published in <a href="prior.shtml">prior</a> page.
+</p></br>
+
+
+
+<h3>Dec. 27, 2013: Score Publish</h3>
+<p>The score of Lab10 has been published (full score is 50). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact your teacher(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before Jan 3. 2014</i></br>
+</p></br>
+
+<h3>Dec. 15, 2013: Score Publish</h3>
+<p>The score of Lab9 has been published (full score is 80). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact your teacher(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before Dec 20.</i></br>
+</p></br>
+
+<h3>Dec. 1, 2013: Lab10</h3>
+<p>Lab10 "<a href="labs/lab10.pdf">Tiny Proxy</a>" has released.</p></br>
+
+
+<h3>Nov. 27, 2013: Score Update</h3>
+<p>The score of middle exam has been updated (full score is 100). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact your teacher(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before Dec. 2.</i>
+</p></br>
+
+<h3>Nov. 26, 2013: Score Publish</h3>
+<p>The score of Lab8 have been published (full score is 100). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact the your teacher(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before Dec. 3.</i></br>
+</p></br>
+
+<h3>Nov. 21, 2013: Score Publish</h3>
+<p>The score of middle exam has been published (full score is 100). Students could query score by logging website.(<i><a href="misc/2013-ics2-middle-exam-result.txt">results</a></i>)</br>  
+<i>NOTE: if you have any questions, please contact your teacher(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before Nov. 30.</i>
+</p></br>
+
+<h3>Nov. 14, 2013: Lab9</h3>
+<p>Lab9 "<a href="labs/lab9.pdf">Tiny Shell</a>" has released.</p></br>
+
+<h3>Nov. 7, 2013: Score Publish</h3>
+<p>The score of Lab7 have been published (full score is 160). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact the your teacher(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before Nov. 18.</i></br>
+</p></br>
+
+<h3>Oct. 24, 2012: Lab8 Update</h3>
+<p>We just update the <a href="labs/lab8-smooth.pdf">smooth score</a> standard, 
+and provide binary exuectable file for <a href="labs/driver-sample-naive">naive</a> and 
+<a href="labs/driver-sample-50">50% points</a> solutions</p></br>
+
+<h3>Oct. 22, 2013: Lab8</h3>
+<p>Lab8 "<a href="labs/lab8.pdf">Performance</a>" has released.</p></br>
+
+
+<h3>Sep. 19, 2013: Group List</h3>
+<p>Please check your <a href="misc/group-2.txt">group</a> information before next tutorial (Sep. 23). 
+(don't forget write down your TA's name on your exercise book)</p></br>
+
+
+<h3>Sep. 9, 2013: I'm back! ^.^</h3>
+<p>Are you ready ?</p></br>
+-->
+
+<h3>Dec. 14, 2014: Score Publish</h3>
+<p>The score of Lab 9 has been published (full score is 80). Students could query score by logging in websites.<br>
+<i>NOTE: if you have any questions, please contact T.A. Mingyu Wu before <b>Dec 21.</b></i></p></br>
+
+<h3>Dec. 4, 2014: Lab 10</h3>
+<p>Lab10 "<a href="labs/lab10.pdf">Proxy</a>" has released.</p></br>
+
+<h3>Dec. 1, 2014: Score Publish</h3>
+<p>The score of ICS2 Middle Exam has been published (full score is 100). Students could query score by logging in websites.<br>
+<i>NOTE: if you have any questions, please contact your T.A. before <b>Dec 7.</b></i></p></br>
+
+<h3>Dec. 1, 2014: Score Publish</h3>
+<p>The score of Lab8 has been published (full score is 60). Students could query score by logging in websites.<br>
+<i>NOTE: if you have any questions, please contact T.A. Lei Qi before <b>Dec 7.</b></i></p></br>
+
+<h3>Nov. 17, 2014: Seat Table</h3>
+<p>2014 fall middle exam seat table for <a href="misc/2014-ics2-middle-exam-seat-ZY205.txt">Group 1 (at ZY 205)</a> and <a href="misc/2014-ics2-middle-exam-seat-ZY209.txt">Group 2 (at ZY 209)</a>.</br>
+<i>NOTE:the middle exam is an open-book exam with 2 hours(10:00~12:00) in Nov.19.</i>
+</p></br>
+
+<h3>Oct. 20, 2014: Lab8</h3>
+<p>Lab8 "<a href="labs/lab8.pdf">Cache</a>" has released.</p></br>
+
+<h3>Oct. 10, 2014: Score Publish</h3>
+<p>The score of Lab7 has been published (full score is 190). Students could check the score <a href="labs/archlab/arch-score.html">here</a>.</br>  
+<i>NOTE: if you have any questions, please contact T.A. Zhichao Hua before Oct 15.</i>
+<!--
+(The detail explanation is in <i><a href="http://ipads.se.sjtu.edu.cn/courses/ics/q2a/index.php?qa=983&qa_1=malloc-lab-%E8%AF%84%E5%88%86%E8%A7%84%E5%88%99">forum</a></i>)
+-->
+
+</p></br>
+<h3>Aug. 14, 2014: Lab7</h3>
+<p>Lab7 "<a href="labs/lab7.pdf">Y86 Processor</a>" has released.</p></br>
+
+
+<h3>Jul. 20, 2014: Score Publish</h3>
+<p>The score of Lab6 (malloclab) has been published (full score is 60). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact Prof. Chen(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before July 24.</i>
+<!--
+(The detail explanation is in <i><a href="http://ipads.se.sjtu.edu.cn/courses/ics/q2a/index.php?qa=983&qa_1=malloc-lab-%E8%AF%84%E5%88%86%E8%A7%84%E5%88%99">forum</a></i>)
+-->
+</p></br>
+
+
+<h3>Jun. 30, 2012: Lab6</h3>
+<p>Lab6 "<a href="labs/lab6.pdf">Memory Allocator</a>" has released.</p></br>
+
+<h3>Jun. 30, 2014: Score Publish</h3>
+<p>The score of final exam has been published (full score is 100). Students could query score by logging website.(<i><a href="misc/2014-ics1-final-exam-result.txt">results</a></i>)</br>  
+<i>NOTE: if you have any questions, please contact Prof. Chen(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before July 3.</i>
+</p></br>
+
+<h3>Jun. 21, 2014: Paper & Solution Publish</h3>
+<p>The paper and solution (A and B) of final exam has been published in <a href="prior.shtml">prior</a> page.
+</p></br>
+
+
+<h3>June 11, 2014: Score Publish</h3>
+<p>The score of online test (Lab2 and Lab3) has been published (full score is 100). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact Prof. Chen(<span class="email_autofill">rongchen at sjtu.edu.cm</span>) before June 18.</i>
+</br>
+(NOTE: the formula of lab scoring is published <i><a href="http://ipads.se.sjtu.edu.cn/courses/ics/q2a/index.php?qa=1589&qa_1=2014-ics-online%E6%88%90%E7%BB%A9%E5%85%AC%E5%BC%8F">here</a></i>)</b></font></span>
+</p>
+
+<h3>June 11, 2014: Score Publish</h3>
+<p>The score of Lab5 has been published (full score is 80). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact Prof. Chen(<span class="email_autofill">realstolz at sjtu.edu.cn</span>) before June 18.</i></br>
+</p></br>
+
+<h3>May. 27, 2014: Score Publish</h3>
+<p>The score of Lab4 has been published (full score is 72). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact Prof. Chen(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before June 6.</i></br>
+<font color="red"><b>13 students lose all points due to cheating!</b></font></span>
+</p></br>
+
+<!--
+<h3>May 23, 2013: Lab5 files update</h3>
+<p>Important! Some files (yat yat.c y86-base/y86asm-base) of Lab5 have been update. Please update your svn directory if you have checkout the lab5.</br>
+Last updated: 2013.5.23 20:25.
+(The detail explanation is in <i><a href="http://ipads.se.sjtu.edu.cn/courses/ics/q2a/index.php?qa=932&qa_1=lab5-y86asm-%E6%96%87%E4%BB%B6-yat-yat-c-y86asm-base-%E6%9B%B4%E6%96%B0">forum</a></i>)
+</p></br>
+-->
+
+<h3>May 22, 2014: Lab5</h3>
+<p>Lab5 "<a href="labs/lab5.pdf">Y86 Assembler</a>" has released.</p></br>
+
+<h3>May 11, 2014: Score Publish</h3>
+<p>The score of middle exam has been published (full score is 100). Students could query score by logging website.(<i><a href="misc/2014-ics1-middle-exam-result.txt">results</a></i>)</br>  
+<i>NOTE: if you have any questions, please contact Prof. Chen(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before May 18.</i>
+</p></br>
+
+<h3>May 7, 2014: Lab4</h3>
+<p>Lab4 "<a href="labs/lab4.pdf">Y86 Simulator</a>" has released.</p></br>
+
+<h3>May 6, 2014: Seat Table</h3>
+<p>2014 spring middle exam seat table for <a href="misc/2014-ics1-middle-exam-seat-DSY203.txt">Group 1 (at DSY 203)</a> and 
+<a href="misc/2014-ics1-middle-exam-seat-DSY204.txt">Group 2 (at DSY 204)</a>.</br>  
+<i>NOTE: the middle exam is an open-book exam with 2 hours (18:00~20:00) in May. 7.</i>
+</p></br>
+
+<h3>Apr. 24, 2014: Lab3</h3>
+<p>Lab3 "<a href="labs/lab3.pdf">Buffer Overflow</a>" has released. 
+<i>NOTE: the <a href="labs/buflab-handout.tar">handout</a> of lab3 is downloaded from websit (not SVN).</i>
+</p></br>
+
+
+<h3>Apr. 14, 2014: Score Publish</h3>
+<p>The score of Lab1 has been published (full score is 75). Students could query score by logging website.</br>  
+<i>NOTE: if you have any questions, please contact Prof. Chen(<span class="email_autofill">rongchen at sjtu.edu.cn</span>) before Apr.18.</i>
+</p></br>
+
+<!--
+<h3>Apr. 3, 2013: Lab2 Renew</h3>
+<p>Important! All bombs of Lab2 have been renewed. Please update your svn directory to get new bomb.</p></br>
+-->
+
+<h3>Apr. 3, 2014: Lab2</h3>
+<p>Lab2 "<a href="labs/lab2.pdf">Bombing</a>" has released.</p></br>
+
+<h3>Mar. 12, 2014: Lab1</h3>
+<p>Lab1 "<a href="labs/lab1.pdf">Bit-level Ops</a>" has released.</p></br>
+
+<!--
+<h3>Mar. 6, 2012: Email</h3>
+<p>Now you could update your profile in <a href="http://ipads.se.sjtu.edu.cn:1984">Register/Login</a> page with your email address, 
+and we would notify you with the course information via email.</p></br>
+
+<h3>Feb. 16, 2012: Tutorial</h3>
+<p>The slides of "Install Debian" has been updated, and a video has been added to <a href="schedule.shtml">schedule</a> page</p></br>
+-->
+
+<h3>Mar. 4, 2014: Group List Updated</h3>
+<p>Please re-check your <a href="misc/group.txt">group</a> information. 
+(don't forget write down your TA's name on your exercise book)</p></br>
+
+<h3>Feb. 25, 2014: Group List</h3>
+<p>Please check your <a href="misc/group.txt">group</a> information before next tutorial. 
+(don't forget write down your TA's name on your exercise book)</p></br>
+
+<h3>Feb. 25, 2014: Registration</h3>
+<p>Opening Time: Feb. 25(Tue.) ~ Mar. 3(Mon.)</p></br>
+
+<h3>Feb. 25, 2014: Tutorial Material </h3>
+<p>Please download materials from FTP (<b>address</b>: <i>202.120.40.60</i> <b>username</b>: <i>tempftp</i> <b>passwd</b>: <i>tempftp</i>) 
+and try them by yourself before attending Tutorial-1 (Feb. 26)</p>
+<table border=1>
+<tr>
+<td bgcolor="#CCCCCC">VMware-player-6.0.1-1379776.exe</td><td>VMware Player Installer</td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC">vmware.step-by-step.pptx</td><td>Step-by-step tutorial of virtual machine creation on VMware Player</td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC">debian.step-by-step.pptx</td><td>Step-by-step tutorial of Debian (a distribution of Linux) installation</td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC">tutorial-linux.pptx</td><td>Slides of Tutorial-1</td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC">install.debian.video.avi</td><td>Video of debian installation</td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC">debian-7.4.0-amd64-CD-1.iso</td><td>Installer ISO of Debian for amd64(x86-64)</td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC">debian-7.4.0-i386-CD-1.iso</td><td>Installer ISO of Debian for i386(x86)</td>
+</tr>
+<tr>
+<td bgcolor="#CCCCCC">VM-stu</td><td>Disk image of virtual machine with Debian</td>
+</tr>
+</table>
+</br>
+
+<h3>Feb. 23, 2014: Q & A</h3>
+<p>Welcome to our "<a href="http://ipads.se.sjtu.edu.cn/courses/ics/q2a">question&answer</a>" forum.</p></br>
+
+<h3>Feb. 23, 2014: Welcome to <i>ICS</i></h3>
+<p><i>ICS</i> will be using Bryant and O'Hallaron's
+<i><a href="http://product.china-pub.com/197441">Computer Systems: A Programmer's Perspective, 2e</a></i>; 
+the readings are required.</p>
+
+<hr>
+<!--  End Page Content  -->
+</td></tr> 
+
+
+<!-- Archnowledge -->
+<tr bgcolor="#999999" height="20px">
+  <td style="padding-left:10px; padding-top: 10px; padding-bottom: 10px">
+
+  <font style="font-size: 12px;">
+  <b>Go to <a href="#top">Top</a></b> // <b><a href="index.shtml"><i>ICS</i> Home Page</a></b> <br>
+
+  Questions or comments regarding <i>ICS</i> course? Send e-mail to the course Staffs or TAs.<br>
+
+  <i>Last updated: Sun Feb. 23 2014</i> <br>
+  </font>
+
+  </td>
+</tr>
+<!-- End Archnowledge -->
+
+      </tbody></table></td>
+	</tr>
+  </tbody>
+</table> 
+</body></html>
+ 
+

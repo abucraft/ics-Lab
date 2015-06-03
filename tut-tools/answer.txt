@@ -1,0 +1,4 @@
+Question1:$ ps | sort -d
+Question2:$ cd ../../usr/share/dict  $grep ^a words | wc -w
+Question3:$ cd ../../etc  $ ls -l | grep .conf | sort -n -k5 | head -n5
+Question4:$ touch "echo.sh"   $echo echo hello world! >> echo.sh
